@@ -50,17 +50,15 @@ function cropImage($filenameImage, $filename, $ext = 'jpg', $isRiht = false)
         case 'jpg':
         case 'jpeg':
         {
-            imagejpeg($thumb, __DIR__ . '/' . $filename, 100);
-            break;
+            return imagejpeg($thumb, __DIR__ . '/' . $filename, 100);
         }
         case 'png':
         {
-            imagepng($thumb,$filename,1);
-            break;
+            return imagepng($thumb,$filename,1);
         }
         default:
         {
-            imagejpeg($thumb, $filename, 100);
+            return imagejpeg($thumb, $filename, 100);
         }
     }
 }
